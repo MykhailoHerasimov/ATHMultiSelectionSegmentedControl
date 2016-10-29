@@ -40,6 +40,16 @@ open class MultiSelectionSegmentedControl: UIView {
         }
     }
     
+    open var font: UIFont! {
+        didSet {
+            if let segmentButtons = _segmentButtons {
+                for button in segmentButtons {
+                    button.titleLabel?.font = font
+                }
+            }
+        }
+    }
+    
     override open var tintColor: UIColor! {
         didSet {
             layer.borderColor = tintColor.cgColor
@@ -159,6 +169,7 @@ open class MultiSelectionSegmentedControl: UIView {
                 let button = ATHMultiSelectionControlSegmentButton(frame: buttonFrame)
 
                 button.tintColor = tintColor
+                button.titleLabel?.font = font
                 button.backgroundColor = backgroundColor
                 button.setButtonSelected(selectedSegmentIndices.contains(index))
                 button.addTarget(self, action: #selector(self._didTouchUpInsideSegment(_:)), for: .touchUpInside)
@@ -315,6 +326,7 @@ open class MultiSelectionSegmentedControl: UIView {
         let button = ATHMultiSelectionControlSegmentButton(frame: CGRect(x: self.frame.width, y: 0, width: 0, height: self.frame.height))
        
         button.tintColor = tintColor
+        button.titleLabel?.font = font
         button.backgroundColor = backgroundColor
         button.addTarget(self, action: #selector(self._didTouchUpInsideSegment(_:)), for: .touchUpInside)
         
@@ -414,8 +426,8 @@ open class MultiSelectionSegmentedControl: UIView {
 //        backgroundColor = UIColor.clearColor()
         layer.cornerRadius = cornerRadius
         layer.masksToBounds = true
-        layer.borderWidth = 1.0
-        layer.borderColor = tintColor.cgColor
+//        layer.borderWidth = 1.0
+//        layer.borderColor = tintColor.cgColor
     
     }
     

@@ -8,7 +8,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   ATHMultiSelectionSegmentedControl:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   ATHMultiSelectionSegmentedControl: d3b8ec8b2b98d301f21eac4234d6a3a5d4752e1e
@@ -16,4 +16,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 0f726248125018a5fd94c733c65f88c765b5fa80
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.1.0.rc.2

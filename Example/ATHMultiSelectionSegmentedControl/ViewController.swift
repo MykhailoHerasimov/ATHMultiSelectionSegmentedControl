@@ -35,6 +35,7 @@ class ViewController: UIViewController, MultiSelectionSegmentedControlDelegate {
         */
         
         multiSegmentedControl.insertSegmentsWithTitles(["Title 1"])
+        multiSegmentedControl.font = UIFont(name: "Chalkduster", size: 10)
         multiSegmentedControl.delegate = self
     }
 
