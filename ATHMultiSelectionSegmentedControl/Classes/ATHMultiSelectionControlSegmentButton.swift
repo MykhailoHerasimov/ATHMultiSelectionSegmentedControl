@@ -74,7 +74,6 @@ internal class ATHMultiSelectionControlSegmentButton: UIButton {
         
         layer.borderWidth = 0.5
         layer.borderColor = tintColor.cgColor
-        
     }
     
     /**
